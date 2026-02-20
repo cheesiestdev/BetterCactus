@@ -6,16 +6,16 @@ import com.mojang.brigadier.arguments.StringArgumentType;
 import com.mojang.brigadier.builder.LiteralArgumentBuilder;
 import net.minecraft.commands.SharedSuggestionProvider;
 
-public class ExampleCommand extends Command {
+public class Cheese extends Command {
 
-	public ExampleCommand() {
-		super("example");
+	public Cheese() {
+		super("wsg");
 	}
 
 	@Override
 	public void build(LiteralArgumentBuilder<SharedSuggestionProvider> builder) {
 		builder.then(argument("name", StringArgumentType.greedyString()).executes(context -> {
-			ChatUtils.infoPrefix("Example Command", "Hello, " + StringArgumentType.getString(context, "name"));
+			ChatUtils.infoPrefix("Chessy", "Hello, " + StringArgumentType.getString(context, "name"));
 			return SINGLE_SUCCESS;
 		}));
 	}
