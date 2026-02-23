@@ -9,16 +9,16 @@ import com.dwarslooper.cactus.client.systems.config.settings.impl.BooleanSetting
 import com.dwarslooper.cactus.client.systems.config.settings.impl.Setting;
 import com.dwarslooper.cactus.client.util.game.ChatUtils;
 
-public class ExampleModule extends Module {
+public class Greeter extends Module {
 
 	// This is a boolean setting, added to an example group.
 	// You can use the existing mainGroup to add a setting to the main group.
 
-	private final SettingGroup exampleGroup = settings.buildGroup("example");
+	private final SettingGroup exampleGroup = settings.buildGroup("sad");
 	public final Setting<Boolean> sendGreetings = exampleGroup.add(new BooleanSetting("sendGreetings", true));
 
-	public ExampleModule() {
-		super("exampleModule", AddonTemplateMain.CATEGORY, new Options());
+	public Greeter() {
+		super("Greeter", AddonTemplateMain.CATEGORY, new Options());
 	}
 
 	@Override
@@ -26,7 +26,7 @@ public class ExampleModule extends Module {
 		// This will get called when the module is enabled
 
 		if(sendGreetings.get()) {
-			ChatUtils.infoPrefix("Example Module", "Hello, Example Module");
+			ChatUtils.infoPrefix("Chessy", "Hello, Player!");
 		}
 	}
 

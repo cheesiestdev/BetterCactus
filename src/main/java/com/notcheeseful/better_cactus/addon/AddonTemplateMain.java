@@ -1,6 +1,6 @@
 package com.notcheeseful.better_cactus.addon;
 import com.notcheeseful.better_cactus.addon.feature.commands.Cheese;
-import com.notcheeseful.better_cactus.addon.feature.modules.ExampleModule;
+import com.notcheeseful.better_cactus.addon.feature.modules.Greeter;
 import com.dwarslooper.cactus.client.addon.v2.ICactusAddon;
 import com.dwarslooper.cactus.client.addon.v2.RegistryBus;
 import com.dwarslooper.cactus.client.feature.command.Command;
@@ -26,7 +26,7 @@ public class AddonTemplateMain implements ICactusAddon {
 		LOGGER.info("Hello, Cactus!");
 
 		registryBus.register(Category.class, ctx -> CATEGORY);
-		registryBus.register(Module.class, ctx -> new ExampleModule());
+		registryBus.register(Module.class, ctx -> new Greeter());
 		registryBus.register(Command.class, ctx -> new Cheese());
 		registryBus.register(Module.class, ctx -> new MyFirstModule());
 

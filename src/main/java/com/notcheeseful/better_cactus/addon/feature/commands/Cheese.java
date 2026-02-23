@@ -9,13 +9,13 @@ import net.minecraft.commands.SharedSuggestionProvider;
 public class Cheese extends Command {
 
 	public Cheese() {
-		super("wsg");
+		super("Chat");
 	}
 
 	@Override
 	public void build(LiteralArgumentBuilder<SharedSuggestionProvider> builder) {
 		builder.then(argument("name", StringArgumentType.greedyString()).executes(context -> {
-			ChatUtils.infoPrefix("Chessy", "Hello, " + StringArgumentType.getString(context, "name"));
+			ChatUtils.infoPrefix("Chessy", " " + StringArgumentType.getString(context, "name"));
 			return SINGLE_SUCCESS;
 		}));
 	}
