@@ -2,10 +2,10 @@
 	"schemaVersion": 1,
 	"id": "addon-template",
 	"version": "${version}",
-	"name": "Addon Template for Cactus Mod",
-	"description": "This is an example description! Tell everyone what your addon is about!",
+	"name": "BetterCactus",
+	"description": "Cactus look better and maybe more",
 	"authors": [
-		"Me!"
+		"notCheeseful"
 	],
 	"contact": {
 		"homepage": "https://cactusmod.xyz/",
@@ -15,7 +15,7 @@
 	"environment": "client",
 	"entrypoints": {
 		"cactus": [
-			"com.dwarslooper.cactus.addon_template.AddonTemplateMain"
+			"com.notcheeseful.better_cactus.addon.AddonTemplateMain"
 		]
 	},
 	"mixins": [

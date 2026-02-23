@@ -1,6 +1,6 @@
-package com.dwarslooper.cactus.addon_template.feature.modules;
+package com.notcheeseful.better_cactus.addon.feature.modules;
 
-import com.dwarslooper.cactus.addon_template.AddonTemplateMain;
+import com.notcheeseful.better_cactus.addon.AddonTemplateMain;
 import com.dwarslooper.cactus.client.event.EventHandler;
 import com.dwarslooper.cactus.client.event.impl.ClientTickEvent;
 import com.dwarslooper.cactus.client.feature.module.Module;

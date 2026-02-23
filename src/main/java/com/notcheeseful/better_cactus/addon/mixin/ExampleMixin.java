@@ -1,4 +1,4 @@
-package com.dwarslooper.cactus.addon_template.mixin;
+package com.notcheeseful.better_cactus.addon.mixin;
 
 import com.mojang.authlib.minecraft.client.MinecraftClient;
 import org.spongepowered.asm.mixin.Mixin;

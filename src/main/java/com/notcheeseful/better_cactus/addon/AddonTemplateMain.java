@@ -1,14 +1,13 @@
-package com.dwarslooper.cactus.addon_template;
-
-import com.dwarslooper.cactus.addon_template.feature.commands.ExampleCommand;
-import com.dwarslooper.cactus.addon_template.feature.modules.ExampleModule;
+package com.notcheeseful.better_cactus.addon;
+import com.notcheeseful.better_cactus.addon.feature.commands.Cheese;
+import com.notcheeseful.better_cactus.addon.feature.modules.ExampleModule;
 import com.dwarslooper.cactus.client.addon.v2.ICactusAddon;
 import com.dwarslooper.cactus.client.addon.v2.RegistryBus;
 import com.dwarslooper.cactus.client.feature.command.Command;
 import com.dwarslooper.cactus.client.feature.module.Category;
 import com.dwarslooper.cactus.client.feature.module.Module;
-import net.fabricmc.api.ModInitializer;
 
+import com.notcheeseful.better_cactus.addon.feature.modules.MyFirstModule;
 import net.minecraft.world.item.Items;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -28,7 +27,8 @@ public class AddonTemplateMain implements ICactusAddon {
 
 		registryBus.register(Category.class, ctx -> CATEGORY);
 		registryBus.register(Module.class, ctx -> new ExampleModule());
-		registryBus.register(Command.class, ctx -> new ExampleCommand());
+		registryBus.register(Command.class, ctx -> new Cheese());
+		registryBus.register(Module.class, ctx -> new MyFirstModule());
 
 		LOGGER.info("Template Addon successfully loaded!");
 	}

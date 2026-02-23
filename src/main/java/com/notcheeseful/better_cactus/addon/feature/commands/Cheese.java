@@ -1,4 +1,4 @@
-package com.dwarslooper.cactus.addon_template.feature.commands;
+package com.notcheeseful.better_cactus.addon.feature.commands;
 
 import com.dwarslooper.cactus.client.feature.command.Command;
 import com.dwarslooper.cactus.client.util.game.ChatUtils;
