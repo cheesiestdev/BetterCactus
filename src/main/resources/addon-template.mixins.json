@@ -3,7 +3,10 @@
 	"package": "com.notcheeseful.better_cactus.addon.mixin",
 	"compatibilityLevel": "JAVA_21",
 	"mixins": [
-		"ExampleMixin"
+		"MinecraftAccessor"
+	],
+	"client": [
+		"FastPlaceMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

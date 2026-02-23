@@ -18,7 +18,7 @@ public class Greeter extends Module {
 	public final Setting<Boolean> sendGreetings = exampleGroup.add(new BooleanSetting("sendGreetings", true));
 
 	public Greeter() {
-		super("Greeter", AddonTemplateMain.CATEGORY, new Options());
+		super("Greeter", AddonTemplateMain.CHEESE_CATEGORY, new Options());
 	}
 
 	@Override

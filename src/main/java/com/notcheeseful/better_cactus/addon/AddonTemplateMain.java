@@ -7,7 +7,7 @@ import com.dwarslooper.cactus.client.feature.command.Command;
 import com.dwarslooper.cactus.client.feature.module.Category;
 import com.dwarslooper.cactus.client.feature.module.Module;
 
-import com.notcheeseful.better_cactus.addon.feature.modules.MyFirstModule;
+import com.notcheeseful.better_cactus.addon.feature.modules.FastPlace;
 import net.minecraft.world.item.Items;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -16,7 +16,8 @@ public class AddonTemplateMain implements ICactusAddon {
 
 	public static final Logger LOGGER = LoggerFactory.getLogger("Cactus Addon Template");
 
-	public static final Category CATEGORY = new Category("exampleCategory", Items.DIAMOND.getDefaultInstance());
+	public static final Category CHEESE_CATEGORY = new Category("Cheese", Items.SPONGE.getDefaultInstance());
+
 
 	@Override
 	public void onInitialize(RegistryBus registryBus) {
@@ -25,10 +26,13 @@ public class AddonTemplateMain implements ICactusAddon {
 
 		LOGGER.info("Hello, Cactus!");
 
-		registryBus.register(Category.class, ctx -> CATEGORY);
+		registryBus.register(Category.class, (list, ctx) -> list.add(CHEESE_CATEGORY));
+		registryBus.register(Module.class, ctx -> new FastPlace(CHEESE_CATEGORY));
+		registryBus.register(Category.class, ctx -> CHEESE_CATEGORY);
 		registryBus.register(Module.class, ctx -> new Greeter());
 		registryBus.register(Command.class, ctx -> new Cheese());
-		registryBus.register(Module.class, ctx -> new MyFirstModule());
+
+
 
 		LOGGER.info("Template Addon successfully loaded!");
 	}
